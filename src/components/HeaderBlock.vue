@@ -33,8 +33,8 @@ header {
   gap: 1em;
   width: 100vw;
   height: 4em;
-  background-color: #000;
-  border-bottom: 1px solid #ffffff45;
+  background-color: hsl(0, 0%, 15%);
+  border-bottom: 1px solid hsl(170, 0%, 25%);
 }
 
 @media (max-width: 426px) {

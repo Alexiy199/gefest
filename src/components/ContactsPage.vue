@@ -1,9 +1,11 @@
 <template>
   <section id="contacts">
-    <h2>contacts</h2>
-    <article>
-      <p>contacts Bla bla bla...</p>
-    </article>
+    <div class="wraper-content">
+      <h2>contacts</h2>
+      <article>
+        <p>contacts Bla bla bla...</p>
+      </article>
+    </div>
   </section>
 </template>
 
@@ -16,9 +18,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#contacts {
-  background-color: rgba(59, 156, 51, 0.685);
-}
-</style>

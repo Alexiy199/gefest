@@ -1,9 +1,11 @@
 <template>
   <section id="case-page">
-    <h2>Case</h2>
-    <article>
-      <p>Case Show Bla bla bla...</p>
-    </article>
+    <div class="wraper-content">
+      <h2>Case</h2>
+      <article>
+        <p>Case Show Bla bla bla...</p>
+      </article>
+    </div>
   </section>
 </template>
 
@@ -16,9 +18,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#case-page {
-  background-color: rgba(59, 56, 51, 0.685);
-}
-</style>

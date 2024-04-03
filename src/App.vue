@@ -25,5 +25,6 @@ import ContactsPage from './components/ContactsPage.vue'
   overflow-x: hidden;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 </style>

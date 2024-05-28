@@ -1,3 +1,9 @@
+<script setup>
+const getSrcImg = (name) => {
+    return `gefest/${name}.jpg`
+}
+</script>
+
 <template>
     <section id="start-page">
         <div class="wraper-content">
@@ -15,19 +21,19 @@
                 </div>
                 <div class="wrap-slide-box" id="example-show">
                     <div class="box-img" id="slide-1">
-                        <img src="@/assets/gefest/exmp_1.jpg" alt="img" class="img-slide" />
+                        <img :src="getSrcImg('exmp_1')" alt="img" class="img-slide" />
                     </div>
                     <div class="box-img" id="slide-2">
-                        <img src="@/assets/gefest/exmp_2.jpg" alt="img" class="img-slide" />
+                        <img :src="getSrcImg('exmp_2')" alt="img" class="img-slide" />
                     </div>
                     <div class="box-img" id="slide-3">
-                        <img src="@/assets/gefest/exmp_3.jpg" alt="img" class="img-slide" />
+                        <img :src="getSrcImg('exmp_3')" alt="img" class="img-slide" />
                     </div>
                     <div class="box-img" id="slide-4">
-                        <img src="@/assets/gefest/exmp_4.jpg" alt="img" class="img-slide" />
+                        <img :src="getSrcImg('exmp_4')" alt="img" class="img-slide" />
                     </div>
                     <div class="box-img" id="slide">
-                        <img src="@/assets/gefest/exmp_5.jpg" alt="img" class="img-slide" />
+                        <img :src="getSrcImg('exmp_5')" alt="img" class="img-slide" />
                     </div>
                 </div>
             </div>
@@ -40,15 +46,9 @@
     </section>
 </template>
 
-<script>
-const slider = document.getElementById('example-show')
-
-console.log(slider)
-</script>
-
 <style scoped>
 .wraper-content {
-    background: url('@/assets/gefest/exmp_4.jpg') hsl(0, 0%, 15%) no-repeat;
+    background: url('../gefest/exmp_4.jpg') hsl(0, 0%, 15%) no-repeat;
     background-position: center;
     background-size: cover;
     & .banner-btn {
@@ -56,7 +56,7 @@ console.log(slider)
         padding: 1em;
         background-color: #00000070;
         border-radius: 10px;
-        margin: 1em auto;
+        margin: 0.7em auto;
         & .start-link {
             display: block;
             font-size: 1.5em;
@@ -85,7 +85,6 @@ console.log(slider)
         align-content: center;
         padding: 2px;
         margin: 0;
-
         & .box-img {
             min-width: 100%;
             min-height: 100%;
@@ -106,17 +105,38 @@ console.log(slider)
     }
 }
 
+#txt-show {
+    padding: 1em;
+}
+
 @media (width < 946px) {
     .wrap-slider {
         flex-direction: column;
+        margin: 1px auto;
+        padding: 2px;
         & .wrap-slide-box {
-            width: 90%;
-            margin: 0 auto;
+            width: 78%;
+            margin: 1px auto;
+            & .start-txt {
+                width: 100%;
+                height: fit-content;
+                margin: 0.3em;
+                padding: 0.2em;
+            }
+        }
+    }
+
+    .wraper-content {
+        & .banner-btn {
+            padding: 3px;
+            margin: 2px auto;
         }
     }
 
     #txt-show {
         width: 99%;
+        margin: 0;
+        padding: 2px;
     }
 }
 
@@ -134,9 +154,5 @@ console.log(slider)
 
 #example-show::-webkit-scrollbar-thumb {
     opacity: 0.5;
-}
-
-#txt-show {
-    padding: 1em;
 }
 </style>

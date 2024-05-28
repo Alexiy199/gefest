@@ -12,7 +12,7 @@ import IconSvg from './IconSvg.vue'
 
             <br />
             <br />
-            <address class="phone-num">+7-938-401-11-46</address>
+            <a href="tel:+79384011146" class="phone-num">+7-938-401-11-46</a>
             <br />
             <br />
 
